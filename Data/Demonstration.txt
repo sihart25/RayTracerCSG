@@ -1,0 +1,167 @@
+Screen {
+
+    Background 0.0 0.0 0.0
+    Width 256
+    Height 256
+    
+    Camera {
+        Rotation 0.0 0.0 0.0
+        Distance 0.0
+        Centre 0.0 0.0 -121.0
+        Scale 100.0
+        Position 0 -121 0
+        Direction 0 1 0
+        Up 0 0 1
+        FieldOfView 60
+    }
+
+    Camera {
+        Rotation 0.0 0.0 0.0
+        Distance 0.0
+        Centre 0.0 0.0 -150.0
+        Scale 100.0
+        Position -150 -150 20
+        Direction 0.707 0.707 0
+        Up 0 0 1
+        FieldOfView 60
+    }
+}
+
+Group {
+
+    Light {
+        Diffuse 1.0 1.0 1.0
+        Specular 1.0 1.0 1.0
+        Centre 200 -150 200
+    }
+
+    Light {
+        Diffuse 1.0 0.784 1.0
+        Specular 1.0 1.0 1.0
+        Centre -200 -150 150
+    }
+    
+    Group {
+
+        Transformation {
+            Translate -50 28.866 -20
+            EulerAngle 0 0 0
+        }
+
+        Cylinder {
+            Material {
+                Diffuse 1.0 0.0 0.0
+            }
+            Centre 0 0 0
+            Radius 20
+            Height 80
+        }
+
+        Sphere {
+            Material {
+                Diffuse 0.0 1.0 0.0
+                Specular 1.0 1.0 1.0
+                Reflection 0.2 0.2 0.2
+            }
+            Centre 0 0 100
+            Radius 20
+        }
+    }
+
+    Group {
+
+        Transformation {
+            Translate 50 28.866 -20
+            EulerAngle 0 0 0
+        }
+
+           Cylinder {
+            Material {
+                Diffuse 1.0 0.0 0.0
+            }
+            Centre 0 0 0
+            Radius 20
+            Height 80
+        }
+
+        Sphere {
+            Material {
+                Diffuse 0.0 1.0 0.0
+                Specular 1.0 1.0 1.0
+                Reflection 0.2 0.2 0.2
+            }
+            Centre 0 0 100
+            Radius 20
+        }
+    }
+
+    Group {
+
+        Transformation {
+            Translate 0 -57.735 -20
+            EulerAngle 0 0 0
+        }
+
+        Cylinder {
+            Material {
+                Diffuse 1.0 0.0 0.0
+            }
+            Centre 0 0 0
+            Radius 20
+            Height 80
+        }
+
+        Sphere {
+            Material {
+                Diffuse 0.0 1.0 0.0
+                Specular 1.0 1.0 1.0
+                Reflection 0.2 0.2 0.2
+            }
+            Centre 0 0 100
+            Radius 20
+        }
+    }
+
+    Sphere {
+        Material {
+            Diffuse 0.0 1.0 1.0
+            Specular 1.0 1.0 1.0
+            Reflection 0.5 0.5 0.5
+        }
+        Centre 0 0 153.333
+        Radius 73.333
+    }
+
+    Triangle {
+        Material {
+            Diffuse 0.5 0.5 0.5
+            Specular 1.0 1.0 1.0
+            Reflection 0.5 0.5 0.5
+        }
+        VertexA 71 50 -20
+        VertexB 71 -79 -20
+        VertexC -71 50 -20 
+    }
+
+    Triangle {
+        Material {
+            Diffuse 0.5 0.5 0.5
+            Specular 1.0 1.0 1.0
+            Reflection 0.5 0.5 0.5
+        }
+        VertexA -71 50 -20
+        VertexB 71 -79 -20
+        VertexC -71 -79 -20  
+    }
+
+    Plane {
+        Material {
+            Diffuse 0.0 0.0 1.0
+        }
+        Centre 0 0 -21
+        Normal 0 0 1
+        Width 1000
+        Height 1000
+        Infinite true
+    }
+}
